@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('../partials/head'); %>
+
+    <body class="container">
+
+        <%- include('../partials/header'); %>
+
+            <main class="card">
+                <div class="card-body">
+                    <h1>Node com Ejs</h1>
+                    <p>Vamos aprender a trabalhar com arquivos Ejs, configurando e ajustando o código.</p>
+
+                    <div class="mt-4">
+                        <h4>Tecnologias usadas</h4>
+                        <ul class="list-group">
+
+                            <% necessaryTechnologies.forEach( (item)=> { %>
+
+                                <li class="list-group-item">
+                                    <%= item %>
+                                </li>
+                                <%}); %>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="mt-4">
+                        <h4>Passo a passo</h4>
+                        <ol class="list-group list-group-numbered">
+
+                            <% stepByStep.forEach( (item)=> { %>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">
+                                            <%= item.command %>
+                                        </div>
+                                        <%= item.description %>
+                                    </div>
+                                </li>
+
+                                <%}); %>
+
+                        </ol>
+
+                    </div>
+                </div>
+
+            </main>
+
+            <%- include('../partials/footer'); %>
+
+
+    </body>
+
+</html>
